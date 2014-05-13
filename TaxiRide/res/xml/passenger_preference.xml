@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory
+                android:title="Мои настройки">
+                <EditTextPreference
+                android:name="Имя"
+                android:summary="Введите ваше имя"
+                android:defaultValue=""
+                android:title="Введите ваше имя"
+                android:key="editFullName"/>
+                
+                <EditTextPreference
+                android:summary="Введите ваш номер телефона"
+                android:defaultValue=""
+                android:title="Номер"
+                android:key="editPhoneNum" />
+                                
+        </PreferenceCategory>
+</PreferenceScreen>

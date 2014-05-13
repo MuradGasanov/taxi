@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="15dp" >
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:src="@drawable/driverwindow" />
+
+    <Button
+        android:id="@+id/MyOrder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/imageView1"
+        android:layout_alignRight="@+id/imageView1"
+        android:layout_below="@+id/imageView1"
+        android:layout_marginTop="15dp"
+        android:text="Мой клиент" />
+
+    <Button
+        android:id="@+id/OpenRequest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/MyOrder"
+        android:layout_alignRight="@+id/MyOrder"
+        android:layout_below="@+id/MyOrder"
+        android:layout_marginTop="15dp"
+        android:text="Открытые заказы" />
+
+    <Button
+        android:id="@+id/editPreference"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/OpenRequest"
+        android:layout_alignRight="@+id/OpenRequest"
+        android:layout_below="@+id/OpenRequest"
+        android:layout_marginTop="15dp"
+        android:text="Настройки" />
+
+</RelativeLayout>

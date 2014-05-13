@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory
+                android:title="Мои настройки">
+                 <EditTextPreference
+                android:summary="Введите название таксопарка"
+                android:defaultValue=""
+                android:title="Название таксопарка"
+                android:key="editCompanyName" />
+                
+                <EditTextPreference
+                android:name="Ваше имя"
+                android:summary="Введите ваше имя"
+                android:defaultValue=""
+                android:title="Введите ваше имя"
+                android:key="editName"/>
+                
+                 <EditTextPreference
+                android:summary="Введите ваш пароль"
+                android:defaultValue=""
+                android:title="Пароль"
+                android:key="editPassword" />
+                <EditTextPreference
+                
+                android:name="Номер телефона"
+                android:summary="Введите ваш номер телефона"
+                android:defaultValue=""
+                android:title="Введите ваш номер телефона"
+                android:key="editPhoneNum" />
+                <EditTextPreference
+                android:name="Радиус поиска клиентов"
+                android:summary="Максимальный радиус в километрах для поиска заказов"
+                android:defaultValue=""
+                android:title="Радиус поиска клиентов"
+                android:key="editMaxPickup" />
+	</PreferenceCategory>
+</PreferenceScreen>
