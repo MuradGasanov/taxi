@@ -80,7 +80,7 @@ public class DriverPreference extends PreferenceActivity implements
 	@Override
 	// menu to save the preferences
 	public boolean onCreateOptionsMenu(Menu menu) {
-		menu.add(Menu.NONE, 0, 0, "Сохранить");
+		menu.add(Menu.NONE, 0, 0, "РЎРѕС…СЂР°РЅРёС‚СЊ");
 		return super.onCreateOptionsMenu(menu);
 	}
 
@@ -98,7 +98,7 @@ public class DriverPreference extends PreferenceActivity implements
 		String result = updateHttpRequest();
 		if (result.equals("fail") || result.equals("")) {
 			Toast toast1 = Toast.makeText(getApplicationContext(),
-					"Данные не могут быть отправлены",
+					"Р”Р°РЅРЅС‹Рµ РЅРµ РјРѕРіСѓС‚ Р±С‹С‚СЊ РѕС‚РїСЂР°РІР»РµРЅС‹",
 					BIND_AUTO_CREATE);
 			toast1.show();
 			// if the result return true

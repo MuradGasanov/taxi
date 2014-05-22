@@ -58,14 +58,14 @@ public class RequestConfirmation extends LoggingActivity {
 
 		// get from and to address of passenger and display on screen
 		TextView fromAddress = (TextView) findViewById(R.id.fromAddressLabel);
-		fromAddress.setText("Место отправления: " + Addres.passengerInfo.getFromAddress());
+		fromAddress.setText("РњРµСЃС‚Рѕ РѕС‚РїСЂР°РІР»РµРЅРёСЏ: " + Addres.passengerInfo.getFromAddress());
 
 		TextView toAddress = (TextView) findViewById(R.id.toAddressLabel);
-		toAddress.setText("Место прибытия: " + Addres.passengerInfo.getToAddress());
+		toAddress.setText("РњРµСЃС‚Рѕ РїСЂРёР±С‹С‚РёСЏ: " + Addres.passengerInfo.getToAddress());
 
 		tripCost = Addres.passengerInfo.getDistance() * 18;
 
-		cost.setText("Примерная стоимость: " + (tripCost + 50.0));
+		cost.setText("РџСЂРёРјРµСЂРЅР°СЏ СЃС‚РѕРёРјРѕСЃС‚СЊ: " + (tripCost + 50.0));
 
 		// the refresh button. Is to get request from the server and
 		// see if any driver has taken this order
@@ -84,20 +84,20 @@ public class RequestConfirmation extends LoggingActivity {
 				TaxiRequest requestInfo = updateHttpRequest();
 
 				if (requestInfo.getAssignedDriverName().equals("")) {
-					driverName.setText("Имя водителя:");
-					driverPhone.setText("Телефон водителя:");
-					arrivalTime.setText("Время поездки:");
+					driverName.setText("РРјСЏ РІРѕРґРёС‚РµР»СЏ:");
+					driverPhone.setText("РўРµР»РµС„РѕРЅ РІРѕРґРёС‚РµР»СЏ:");
+					arrivalTime.setText("Р’СЂРµРјСЏ РїРѕРµР·РґРєРё:");
 				} else {
-					driverName.setText("Имя водителя: "
+					driverName.setText("РРјСЏ РІРѕРґРёС‚РµР»СЏ: "
 							+ requestInfo.getAssignedDriverName());
-					driverPhone.setText("Телефон водителя: "
+					driverPhone.setText("РўРµР»РµС„РѕРЅ РІРѕРґРёС‚РµР»СЏ: "
 							+ requestInfo.getAssignedDriverPhoneNumber());
-					arrivalTime.setText("Время поездки: "
-							+ requestInfo.getEstimatedArrivalTime() + " мин.");
+					arrivalTime.setText("Р’СЂРµРјСЏ РїРѕРµР·РґРєРё: "
+							+ requestInfo.getEstimatedArrivalTime() + " РјРёРЅ.");
 				}
 				if (requestInfo.getIsRequestCompleted().equals("Y")) {
 					Toast toast = Toast.makeText(getApplicationContext(),
-							"Заказ завершен",
+							"Р—Р°РєР°Р· Р·Р°РІРµСЂС€РµРЅ",
 							1000);
 					toast.show();
 					Intent myIntent = new Intent(getApplicationContext(), MainActivity.class);
@@ -118,19 +118,19 @@ public class RequestConfirmation extends LoggingActivity {
 				String result = cancelSendHttpRequest();
 				if (result.equals("fail")) {
 					Toast toast = Toast.makeText(getApplicationContext(),
-							"Ваш запрос не был отменен, попробуйте еще раз",
+							"Р’Р°С€ Р·Р°РїСЂРѕСЃ РЅРµ Р±С‹Р» РѕС‚РјРµРЅРµРЅ, РїРѕРїСЂРѕР±СѓР№С‚Рµ РµС‰Рµ СЂР°Р·",
 							1000);
 					toast.show();
 				} else {
 					// after canceling the http request, the confirmation is
 					// reset back to empty on every field
 					Addres.passengerInfo.setconfirmID(result);
-					driverName.setText("Имя водителя:");
-					driverPhone.setText("Телефон водителя:");
-					arrivalTime.setText("Время поездки:");
-					cost.setText("Примерная стоимость:");
+					driverName.setText("РРјСЏ РІРѕРґРёС‚РµР»СЏ:");
+					driverPhone.setText("РўРµР»РµС„РѕРЅ РІРѕРґРёС‚РµР»СЏ:");
+					arrivalTime.setText("Р’СЂРµРјСЏ РїРѕРµР·РґРєРё:");
+					cost.setText("РџСЂРёРјРµСЂРЅР°СЏ СЃС‚РѕРёРјРѕСЃС‚СЊ:");
 					Toast toast1 = Toast.makeText(getApplicationContext(),
-							"Ваш запрос был отменен",
+							"Р’Р°С€ Р·Р°РїСЂРѕСЃ Р±С‹Р» РѕС‚РјРµРЅРµРЅ",
 							BIND_AUTO_CREATE);
 					toast1.show();
 					Intent myIntent = new Intent(getApplicationContext(), MainActivity.class);

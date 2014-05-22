@@ -59,23 +59,23 @@ public class PassengerRequest extends LoggingActivity {
 		    StrictMode.setThreadPolicy(policy); 
 		}
 		TextView requestName = (TextView) findViewById(R.id.requestName);
-		requestName.setText("Имя пассажира: "
+		requestName.setText("РРјСЏ РїР°СЃСЃР°Р¶РёСЂР°: "
 				+ ListOfRequest.TAXIREQUEST.getRequestName());
 
 		TextView requestPhone = (TextView) findViewById(R.id.requestPhone);
-		requestPhone.setText("Телефон пасcажира: "
+		requestPhone.setText("РўРµР»РµС„РѕРЅ РїР°СЃcР°Р¶РёСЂР°: "
 				+ ListOfRequest.TAXIREQUEST.getRequestPhoneNumber());
 
 		TextView requestLocation = (TextView) findViewById(R.id.fromAddress);
-		requestLocation.setText("Место отправления: "
+		requestLocation.setText("РњРµСЃС‚Рѕ РѕС‚РїСЂР°РІР»РµРЅРёСЏ: "
 				+ ListOfRequest.TAXIREQUEST.getRequestPickupLocation());
 
 		TextView destination = (TextView) findViewById(R.id.toAddress);
-		destination.setText("Место прибытия: "
+		destination.setText("РњРµСЃС‚Рѕ РїСЂРёР±С‹С‚РёСЏ: "
 				+ ListOfRequest.TAXIREQUEST.getRequestDestination());
 
 		TextView totalPass = (TextView) findViewById(R.id.totalPass);
-		totalPass.setText("Число пассажиров: "
+		totalPass.setText("Р§РёСЃР»Рѕ РїР°СЃСЃР°Р¶РёСЂРѕРІ: "
 				+ ListOfRequest.TAXIREQUEST.getTotalPeople());
 
 		// get the coordinate of the passenger and the driver

@@ -37,7 +37,7 @@ public class DriverWindow extends LoggingActivity {
 		String serverAddress = serverSetting.getString("address", "");
 		if (serverAddress.equals("")) {
 			SharedPreferences.Editor editServerSettings = serverSetting.edit();
-			editServerSettings.putString("address", "http://192.168.0.24/");
+			editServerSettings.putString("address", "http://taxi.kurukukuru.ru/");
 			editServerSettings.commit();
 		}
 
@@ -83,7 +83,7 @@ public class DriverWindow extends LoggingActivity {
 					Toast toast2 = Toast
 							.makeText(
 									getApplicationContext(),
-									"Идет определение вашего местоположения ...",
+									"РРґРµС‚ РѕРїСЂРµРґР»РµРЅРёРµ РІР°С€РµРіРѕ РјРµСЃС‚РѕРїРѕР»РѕР¶РµРЅРёСЏ ...",
 									10);
 					toast2.show();
 
@@ -165,7 +165,7 @@ public class DriverWindow extends LoggingActivity {
 		public void onProviderDisabled(String arg0) {
 
 			Toast toast3 = Toast.makeText(getApplicationContext(),
-					"GPS выключен!", BIND_AUTO_CREATE);
+					"GPS РІС‹РєР»СЋС‡РµРЅ!", BIND_AUTO_CREATE);
 			toast3.show();
 			// TODO Auto-generated method stub
 

@@ -20,7 +20,7 @@ public class MainActivity extends Activity {
 		String serverAddress = serverSetting.getString("address", "");
 		if (serverAddress.equals("")) {
 			SharedPreferences.Editor editServerSettings = serverSetting.edit();
-			editServerSettings.putString("address", "http://192.168.0.24/");
+			editServerSettings.putString("address", "http://taxi.kurukukuru.ru/");
 			editServerSettings.commit();
 		}
 		

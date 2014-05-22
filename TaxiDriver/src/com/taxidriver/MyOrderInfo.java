@@ -52,27 +52,27 @@ public class MyOrderInfo extends LoggingActivity {
 
 		setContentView(R.layout.myorderinfo);
 		TextView requestName = (TextView) findViewById(R.id.myOrderRequestName);
-		requestName.setText("Имя пассажира: "
+		requestName.setText("РРјСЏ РїР°СЃСЃР°Р¶РёСЂР°: "
 				+ ListOfRequest.TAXIREQUEST.getRequestName());
 
 		TextView requestPhone = (TextView) findViewById(R.id.myOrderRequestPhone);
-		requestPhone.setText("Телефон пасcажира: "
+		requestPhone.setText("РўРµР»РµС„РѕРЅ РїР°СЃcР°Р¶РёСЂР°: "
 				+ ListOfRequest.TAXIREQUEST.getRequestPhoneNumber());
 
 		TextView requestLocation = (TextView) findViewById(R.id.myOrderFromAddress);
-		requestLocation.setText("Место отправления: "
+		requestLocation.setText("РњРµСЃС‚Рѕ РѕС‚РїСЂР°РІР»РµРЅРёСЏ: "
 				+ ListOfRequest.TAXIREQUEST.getRequestPickupLocation());
 
 		TextView destination = (TextView) findViewById(R.id.myOrderToAddress);
-		destination.setText("Место прибытия: "
+		destination.setText("РњРµСЃС‚Рѕ РїСЂРёР±С‹С‚РёСЏ: "
 				+ ListOfRequest.TAXIREQUEST.getRequestDestination());
 
 		TextView totalPass = (TextView) findViewById(R.id.myOrderTotalPass);
-		totalPass.setText("Число пассажиров: "
+		totalPass.setText("Р§РёСЃР»Рѕ РїР°СЃСЃР°Р¶РёСЂРѕРІ: "
 						+ ListOfRequest.TAXIREQUEST.getTotalPeople());
 
 		TextView status = (TextView) findViewById(R.id.myOrderStatus);
-		status.setText("Статус: Заказ принят");
+		status.setText("РЎС‚Р°С‚СѓСЃ: Р—Р°РєР°Р· РїСЂРёРЅСЏС‚");
 
 		// if the driver decide to cancel the order.
 		// press on the cancel button
@@ -87,7 +87,7 @@ public class MyOrderInfo extends LoggingActivity {
 				String result = sendHttpRequest();
 				if (result.equals("success")) {
 					Toast toast1 = Toast.makeText(getApplicationContext(),
-							"Заказ отменен", 100);
+							"Р—Р°РєР°Р· РѕС‚РјРµРЅРµРЅ", 100);
 					toast1.show();
 					Intent myIntent = new Intent(getBaseContext(), ListOfRequest.class);
 					startActivityForResult(myIntent, 0);
@@ -107,7 +107,7 @@ public class MyOrderInfo extends LoggingActivity {
 				String result = completeHttpRequest();
 				if (result.equals("success")) {
 					Toast toast1 = Toast.makeText(getApplicationContext(),
-							"Заказ завершен", 100);
+							"Р—Р°РєР°Р· Р·Р°РІРµСЂС€РµРЅ", 100);
 					toast1.show();
 					Intent myIntent = new Intent(getBaseContext(), DriverWindow.class);
 					startActivityForResult(myIntent, 0);

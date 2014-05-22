@@ -50,7 +50,7 @@ public class PassengerPreference extends PreferenceActivity implements
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
-		menu.add(Menu.NONE, 0, 0, "Сохранить");
+		menu.add(Menu.NONE, 0, 0, "РЎРѕС…СЂР°РЅРёС‚СЊ");
 		return super.onCreateOptionsMenu(menu);
 	}
 
